@@ -26,7 +26,7 @@ def api_deepspeech(id):
     args = "deepspeech --alphabet {0}/alphabet.txt --model {0}/output_graph.pbmm --lm {0}/lm.binary --trie {0}/trie --audio".format(app.config['DEEPSPEECH_BASE']).split(' ')
     args.append(filename)
     
-    print("Running: " + args)
+    print("Running: " + str(args))
     
     result = subprocess.run(args, stdout=subprocess.PIPE)
     
